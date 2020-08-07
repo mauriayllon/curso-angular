@@ -1,10 +1,18 @@
-import { Component, VERSION } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import {from, fromEvent} from 'rxjs';
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent  {
-  name = 'Angular ' + VERSION.major;
+export class AppComponent implements OnInit {
+  title = 'curso-angular';
+
+  ngOnInit(){
+    const array = from([1,2,3,4,5,6]);
+    array.subscribe(s=> console.log('items', s))
+
+    const aux = fromEvent(document, 'mousemove');
+    aux.subscribe((s:any) => console.log('event: ', s.clientX + ', '+ s.clientY));
+  }
 }

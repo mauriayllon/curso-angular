@@ -14,5 +14,5 @@ export class AppComponent implements OnInit {
 
     const aux = fromEvent(document, 'mousemove');
     aux.subscribe((s:any) => console.log('event: ', s.clientX + ', '+ s.clientY));
-  }
+  } 
 }

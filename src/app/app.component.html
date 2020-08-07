@@ -1,5 +1,11 @@
 <p>Mauricio</p>
 
-<app-test></app-test>
+<div style="border: 1px solid red;">
+<app-test age="3"(clickAge)="saveClickChild($event)"></app-test>
+</div>
 
-<app-test2></app-test2> 
+<div style="border: 1px solid green;">
+<app-test2 age="21" name="Mauricio" description="Hola" (clickSave)="clickSaveChild($event)"
+          ></app-test2>
+</div>
+

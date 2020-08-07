@@ -12,10 +12,10 @@ import { Test2Component } from './test2/test2.component';
     TestComponent,
     Test2Component,
   ],
-  imports: [
+  imports: [ 
     BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
-})
+}) 
 export class AppModule { }

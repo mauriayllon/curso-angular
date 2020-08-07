@@ -11,12 +11,12 @@ export class AppComponent implements OnInit {
 
   ngOnInit(){
     
-  } 
+  }  
 
  saveClickChild(event){
    console.log('Event Child: ', event)
  }
-
+ 
  clickSaveChild(event){
    console.log('Event Child: ', event)
  }

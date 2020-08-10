@@ -11,11 +11,12 @@ export class AppComponent implements OnInit {
 
   sw:boolean=true;
 
+  persons=[1,2,3,4,5];
 
   ngOnInit(){
     
   }  
-
+ 
  saveClickChild(event){
    console.log('Event Child: ', event)
  }

@@ -8,10 +8,13 @@
 <app-test2 age="21" name="Mauricio" description="Hola" (clickSave)="clickSaveChild($event)"
           ></app-test2>
 </div> 
- 
+  
 
  <div  *ngIf="sw" style="border: 1px solid black;">
 <app-test3></app-test3>
 <button (click)="sw =false;"> Change SW</button>
 </div> 
-  
+
+ <div *ngFor="let person of persons; let i = index">
+   <p>{{person}}==={{i}}</p>
+</div> 

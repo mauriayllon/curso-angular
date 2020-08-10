@@ -9,6 +9,9 @@ import { EmitterVisitorContext } from '@angular/compiler';
 export class AppComponent implements OnInit {
   title = 'curso-angular';
 
+  sw:boolean=true;
+
+
   ngOnInit(){
     
   }  
@@ -19,5 +22,5 @@ export class AppComponent implements OnInit {
  
  clickSaveChild(event){
    console.log('Event Child: ', event)
- }
+ }  
 }

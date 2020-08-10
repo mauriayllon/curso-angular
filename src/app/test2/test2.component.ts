@@ -2,9 +2,17 @@ import { Component, OnInit, Input, Output,EventEmitter, OnChanges } from '@angul
 
 @Component({
   selector: 'app-test2',
-  templateUrl: './test2.component.html',
-  styleUrls: ['./test2.component.css']
-})
+  template:`<p>Componente test1</p> 
+<p>Entrada Age: {{age}}</p>
+<p>Entrada name: {{name}}</p>
+<p>Entrada description: {{description}}</p>
+<button (click)="onClickSave()">save</button>
+
+<input type="text" [(ngModel)]="user">
+ 
+<p> USER: {{user}}</p>`,
+  styles: [``]
+}) 
 export class Test2Component implements OnChanges, OnInit {
 
 

@@ -2,8 +2,10 @@ import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-test',
-  templateUrl: './test.component.html',
-  styleUrls: ['./test.component.css']
+  template:`<p>Componente test1</p> 
+<p>Entrada Age: {{age}}</p>
+<button (click)="onClickSave()">save</button> `,
+  styles:[``]
 })
 export class TestComponent implements OnInit {
 
@@ -12,7 +14,7 @@ export class TestComponent implements OnInit {
   constructor() { }
 
  
-  ngOnInit() {
+  ngOnInit() { 
   }
 
   onClickSave(){

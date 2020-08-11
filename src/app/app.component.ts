@@ -19,6 +19,24 @@ export class AppComponent implements OnInit {
 
   auxClass=true;
 
+  personss=[{name:'Mauri',
+  lastName:'Ayllon',
+  age: 21,
+  enable: true},
+  {name:'Maria Emilia',
+  lastName:'Aguilar',
+  age: 21,
+  enable: true},
+  {name:'James',
+  lastName:'Baci',
+  age: 21,
+  enable: false},
+  {name:'Mauri',
+  lastName:'Gui',
+  age: 21,
+  enable: false}]
+
+
   ngOnInit(){
     
   }  

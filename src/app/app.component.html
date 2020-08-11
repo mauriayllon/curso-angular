@@ -48,3 +48,10 @@
 <div [class.test1]="auxClass" >
   ngClass example
 </div>
+
+<div *ngFor="let person of personss">
+<div [ngStyle]="{'background': person.enable ? 'purple' :'red' }">
+<persona [name]="person.name" [lastName]="person.lastName" [age]="person.age" [enable]="person.enable"
+          ></persona>
+</div>
+</div>

@@ -25,3 +25,15 @@
    <p *ngSwitchDefault>No es ni 3 ni 2</p>
 </div> 
  
+ <button (click)="auxColor='yellow'">Amarillo</button>
+ <button (click)="auxColor='green'">Verde</button>
+  <button (click)="auxColor='red'">Rojo</button>
+
+
+<div [ngStyle]="{ 'border': '1px solid '+ auxColor, 'color': auxColor}">
+  personas
+</div>
+
+<div [style.color]="auxColor">
+  auto
+</div> 

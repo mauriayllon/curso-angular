@@ -13,7 +13,7 @@ export class TestComponent implements OnInit {
  @Output() clickAge = new EventEmitter();
   constructor() { }
 
- 
+  
   ngOnInit() { 
   }
 

@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
   lastName:'Gui',
   age: 21,
   enable: false}]
-
+ 
 
   ngOnInit(){
     

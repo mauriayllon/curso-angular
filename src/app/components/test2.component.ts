@@ -14,7 +14,7 @@ import { Component, OnInit, Input, Output,EventEmitter, OnChanges } from '@angul
   styles: [``]
 }) 
 export class Test2Component implements OnChanges, OnInit {
-
+ 
 
   @Input() age: number;
   @Input() name: string;

@@ -13,7 +13,7 @@ export class Test3Component implements OnInit, OnChanges, DoCheck, AfterContentI
   @Input() name: string ;
 
   constructor() { }
-
+ 
   ngOnInit() {
     console.log('ON INIT')
   }

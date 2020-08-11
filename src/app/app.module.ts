@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { Test3Component } from './components/test3.component';
 import { PersonaComponent } from '.components/persona/persona.component';
 
-
+  
 @NgModule({
   declarations: [
     AppComponent,

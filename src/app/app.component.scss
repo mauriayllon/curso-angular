@@ -1,0 +1,10 @@
+.test1 {
+  border:  1px solid red;
+  color: yellow;
+  padding: 20px;
+}
+.test2{
+  border:  1px solid gray;
+  color: green($color: #000000);
+  padding: 20px;
+}

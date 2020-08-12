@@ -7,6 +7,8 @@ import { Test2Component } from './components/test2.component';
 import { FormsModule } from '@angular/forms';
 import { Test3Component } from './components/test3.component';
 import { PersonModule } from './modules/person/person.module';
+import { ProductoModule } from './modules/producto/producto.module';
+
 
 
   
@@ -20,13 +22,14 @@ import { PersonModule } from './modules/person/person.module';
   imports: [ 
     BrowserModule,
     FormsModule,
-    PersonModule
+    PersonModule,
+    ProductoModule
   ], 
   //servicios
   providers: [],
 
 
-
+ 
   bootstrap: [AppComponent]
 }) 
 export class AppModule { }

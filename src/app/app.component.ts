@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
  
 
   ngOnInit(){
-    
+     
   }  
  
  saveClickChild(event){

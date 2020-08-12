@@ -16,5 +16,5 @@ export class PersonaComponent implements OnInit {
 
   ngOnInit() {
   }
-
+ 
 }

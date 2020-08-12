@@ -12,13 +12,13 @@ export class AppComponent implements OnInit {
   sw:boolean=true;
 
   persons=[1,2,3,4,5];
-
+ 
   aux = 4;
 
   auxColor = 'red';
 
   auxClass=true;
-
+ 
   personss=[{name:'Mauri',
   lastName:'Ayllon',
   age: 21,

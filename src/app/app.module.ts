@@ -35,7 +35,7 @@ import { TestPipe } from './pipes/test.pipe';
   ], 
   exports:[
  
-  ],
+  ], 
   //servicios
   providers: [],
 

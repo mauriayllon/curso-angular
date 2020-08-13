@@ -10,5 +10,5 @@ export class TestPipe implements PipeTransform {
   transform(value: any, args?: any): any {
     return "hi " + value;
   }
-
+  
 } 

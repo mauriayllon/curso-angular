@@ -10,6 +10,7 @@ import { PersonModule } from './modules/person/person.module';
 import { ProductoModule } from './modules/producto/producto.module';
 import { UserModule } from './modules/user/user.module';
 import { AdminModule } from './modules/admin/admin.module';
+import { TestPipe } from './pipes/test.pipe';
 
 
 
@@ -21,6 +22,7 @@ import { AdminModule } from './modules/admin/admin.module';
     TestComponent,
     Test2Component,
     Test3Component,
+    TestPipe,
   
   ],
   imports: [ 
@@ -32,7 +34,7 @@ import { AdminModule } from './modules/admin/admin.module';
     AdminModule
   ], 
   exports:[
-
+ 
   ],
   //servicios
   providers: [],

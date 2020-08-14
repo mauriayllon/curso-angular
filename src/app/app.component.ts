@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
 
   auxColor = 'red';
 
+
   auxClass=true; 
  
   personss=[{name:'Mauri',
@@ -38,6 +39,10 @@ export class AppComponent implements OnInit {
   age: 21,
   enable: false}]
  
+  auxNumber: number=3;
+
+  auxExponent: number=2;
+
 
   ngOnInit(){
      

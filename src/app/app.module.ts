@@ -11,9 +11,11 @@ import { ProductoModule } from './modules/producto/producto.module';
 import { UserModule } from './modules/user/user.module';
 import { AdminModule } from './modules/admin/admin.module';
 import { TestPipe } from './pipes/test.pipe';
+import { ExpoPipe } from './pipes/expo.pipe';
 
 
 
+ 
 
    
 @NgModule({
@@ -23,6 +25,7 @@ import { TestPipe } from './pipes/test.pipe';
     Test2Component,
     Test3Component,
     TestPipe,
+    ExpoPipe
   
   ],
   imports: [ 

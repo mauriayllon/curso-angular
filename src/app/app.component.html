@@ -74,6 +74,13 @@
 <p>Var name: {{name | test}}</p>
   
 
-  <input type="text" [(ngModel)]="auxNumber">
+<input type="text" [(ngModel)]="auxNumber">
 <input type="text" [(ngModel)]="auxExponent">
  <p>{{auxNumber| expo:auxExponent : 'Hola'}}</p> 
+
+<div>
+<p>Pure: {{numbers | pure}}</p>
+<p>Impure: {{numbers | impure}}</p>
+<button (click)="numbers.push(4)">add</button>
+</div>
+ 

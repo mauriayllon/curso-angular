@@ -11,4 +11,4 @@ export class TestPipe implements PipeTransform {
     return "hi " + value;
   }
   
-} 
+}   

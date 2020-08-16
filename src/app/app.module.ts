@@ -12,6 +12,9 @@ import { UserModule } from './modules/user/user.module';
 import { AdminModule } from './modules/admin/admin.module';
 import { TestPipe } from './pipes/test.pipe';
 import { ExpoPipe } from './pipes/expo.pipe';
+import { PurePipe } from './pipes/pure.pipe';
+import { ImpurePipe } from './pipes/impure.pipe';
+
 
 
 
@@ -25,8 +28,9 @@ import { ExpoPipe } from './pipes/expo.pipe';
     Test2Component,
     Test3Component,
     TestPipe,
-    ExpoPipe
-  
+    ExpoPipe,
+    PurePipe,
+    ImpurePipe
   ],
   imports: [ 
     BrowserModule,

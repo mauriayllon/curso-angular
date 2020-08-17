@@ -66,4 +66,4 @@ export class AppComponent implements OnInit {
    console.log('Event Child: ', event)
  }   
 }
- 
+  

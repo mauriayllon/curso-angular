@@ -10,4 +10,4 @@ export class ImpurePipe implements PipeTransform {
     return data.filter(d => d%2==0);
   }
 
-}
+} 

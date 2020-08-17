@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
 
   auxColor = 'red';
 
-
+ 
   auxClass=true; 
  
   personss=[{name:'Mauri',
@@ -66,3 +66,4 @@ export class AppComponent implements OnInit {
    console.log('Event Child: ', event)
  }   
 }
+ 

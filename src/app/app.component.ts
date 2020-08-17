@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import {from, fromEvent} from 'rxjs';
 import { EmitterVisitorContext } from '@angular/compiler';
 @Component({
@@ -7,6 +7,7 @@ import { EmitterVisitorContext } from '@angular/compiler';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
   title = 'curso-angular';
 
   sw:boolean=true;

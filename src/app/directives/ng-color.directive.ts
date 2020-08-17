@@ -7,19 +7,22 @@ export class NgColorDirective {
 //elementRef es para pasar htmls
 
 
-  @Input()
+  @Input('appNgColor') color:string;
+  @Input() secondColor:string;
+ 
+ 
   @Output()
 
   @HostListener('mouseenter') onMouseEnter(){
     console.log("Mouse enter")
-    this.changeColor('green');
+    this.el.nativeElement.style.backgroundColor = this.color;
   }
   @HostListener('mouseleave') onMouseLeave(){
     console.log("Mouse Leave");
-    this.changeColor('purple');
+    this.changeColor(this.secondColor);
   }
 
-
+ 
   constructor(private el: ElementRef) { 
     console.log("ElementRef", el);
     this.changeColor('gray') 

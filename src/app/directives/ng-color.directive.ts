@@ -9,7 +9,7 @@ export class NgColorDirective {
 
   @Input('appNgColor') color:string;
   @Input() secondColor:string;
- 
+
  
   @Output()
 
@@ -22,7 +22,6 @@ export class NgColorDirective {
     this.changeColor(this.secondColor);
   }
 
- 
   constructor(private el: ElementRef) { 
     console.log("ElementRef", el);
     this.changeColor('gray') 

@@ -12,7 +12,7 @@
 
  <div  *ngIf="sw" style="border: 1px solid black;">
 <app-test3></app-test3>
-<button (click)="sw =false;"> Change SW</button>
+<button (click)="sw=false;"> Change SW</button>
 </div> 
 
  <div *ngFor="let person of persons; let i = index">
@@ -20,6 +20,7 @@
 </div> 
 
  <div [ngSwitch]="aux">
+   <input type="text" [(ngModel)]="aux">
    <p *ngSwitchCase="3">el valor es 3</p>
    <p *ngSwitchCase="2">el valor es 2</p>
    <p *ngSwitchDefault>No es ni 3 ni 2</p>
@@ -49,7 +50,9 @@
   ngClass example
 </div> 
 
+
 <div *ngFor="let person of personss">
+
 <div [ngStyle]="{'background': person.enable ? 'purple' :'red' }">
 <persona [name]="person.name" [lastName]="person.lastName" [age]="person.age" [enable]="person.enable"
           ></persona>
@@ -76,7 +79,7 @@
  
 <input type="text" [(ngModel)]="auxNumber">
 <input type="text" [(ngModel)]="auxExponent">
- <p>{{auxNumber| expo:auxExponent : 'Hola'}}</p> 
+ <p>{{ auxNumber | expo : auxExponent : 'Hola'}}</p> 
 
 <div>
 <p>Pure: {{numbers | pure}}</p>
@@ -88,4 +91,8 @@
  Mauricio 
 </div>
 
-    
+
+<button (click)="name='Maria';lastName='Aguilar'">Change name, last name</button>
+<app-test3 [name]="name" 
+[lastName]="lastName">
+</app-test3> 

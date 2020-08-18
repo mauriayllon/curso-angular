@@ -14,13 +14,15 @@ export class AppComponent implements OnInit {
 
   name='mauricio';
 
+  lastName ='Aguilar';
+  
   persons=[1,2,3,4,5];
  
   aux = 4;
 
   auxColor = 'red';
 
- 
+  
   auxClass=true; 
  
   personss=[{name:'Mauri',
@@ -67,4 +69,4 @@ export class AppComponent implements OnInit {
    console.log('Event Child: ', event)
  }   
 }
-  
+   

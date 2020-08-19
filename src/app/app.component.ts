@@ -48,10 +48,10 @@ export class AppComponent implements OnInit {
 
   numbers =[1,2,3,4,4,5,6,7,8,9,10];
 
-  ngOnInit(){
+  /*ngOnInit(){
     console.log('Pura :', this.pura(6,3))
     console.log('Pura :', this.impura(6,3))
-  }  
+  }*/ 
 
   pura(a:number, b:number){
     return a+b;

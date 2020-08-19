@@ -35,6 +35,7 @@ export class Test3Component implements OnInit, OnChanges, DoCheck, AfterContentI
       this.lastName = aux;
     }
   }
+  /*
   ngDoCheck(){
     console.log('DO CHECK')
   }
@@ -53,6 +54,6 @@ export class Test3Component implements OnInit, OnChanges, DoCheck, AfterContentI
   ngOnDestroy(){
     console.log('OnDestroy') 
   }
-    
+    */
 }
 

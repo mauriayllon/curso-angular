@@ -16,10 +16,12 @@ import { PurePipe } from './pipes/pure.pipe';
 import { ImpurePipe } from './pipes/impure.pipe';
 import { NgColorDirective } from './directives/ng-color.directive';
 import { NgFocusDirective } from './directives/ng-focus.directive';
-import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
 import { AppRouting } from './app.routing';
+import { HomeComponent } from './home/home.component';
+import { Home1Component } from './home1/home1.component';
+import { Home2Component } from './home2/home2.component';
   
 
 @NgModule({
@@ -34,9 +36,11 @@ import { AppRouting } from './app.routing';
     ImpurePipe,
     NgColorDirective,
     NgFocusDirective,
-    HomeComponent,
     AboutComponent,
-    AdminComponent
+    AdminComponent,
+    HomeComponent,
+    Home1Component,
+    Home2Component
   ],
   imports: [ 
     BrowserModule,

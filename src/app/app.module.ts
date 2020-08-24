@@ -8,7 +8,6 @@ import { FormsModule } from '@angular/forms';
 import { Test3Component } from './components/test3.component';
 import { PersonModule } from './modules/person/person.module';
 import { ProductoModule } from './modules/producto/producto.module';
-import { UserModule } from './modules/user/user.module';
 import { AdminModule } from './modules/admin/admin.module';
 import { TestPipe } from './pipes/test.pipe';
 import { ExpoPipe } from './pipes/expo.pipe';
@@ -22,6 +21,7 @@ import { AppRouting } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { Home1Component } from './home1/home1.component';
 import { Home2Component } from './home2/home2.component';
+
   
 
 @NgModule({
@@ -40,14 +40,13 @@ import { Home2Component } from './home2/home2.component';
     AdminComponent,
     HomeComponent,
     Home1Component,
-    Home2Component
+    Home2Component,
   ],
   imports: [ 
     BrowserModule,
     FormsModule,
     PersonModule,
     ProductoModule,
-    UserModule,
     AdminModule,
     AppRouting
   ], 

@@ -10,9 +10,7 @@ import { AppRouting } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { Home1Component } from './home1/home1.component';
 import { Home2Component } from './home2/home2.component';
-//import { NgbModule} from '@ng-boostrap/ng-boostrap';
 
-  
 
 @NgModule({
   declarations: [
@@ -23,21 +21,13 @@ import { Home2Component } from './home2/home2.component';
     Home1Component,
     Home2Component,
   ],
-  imports: [ 
+  imports: [
     BrowserModule,
     FormsModule,
     AppRouting,
-    //NgbModule
-    
-  ], 
-  exports:[
- 
-  ], 
-  //servicios
+  ],
+  exports: [],
   providers: [],
-
-
- 
   bootstrap: [AppComponent]
-}) 
+})
 export class AppModule { }

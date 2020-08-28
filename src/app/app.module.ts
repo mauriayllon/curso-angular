@@ -10,6 +10,7 @@ import { AppRouting } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { Home1Component } from './home1/home1.component';
 import { Home2Component } from './home2/home2.component';
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { Home2Component } from './home2/home2.component';
     BrowserModule,
     FormsModule,
     AppRouting,
+    NgbModule
   ],
   exports: [],
   providers: [],

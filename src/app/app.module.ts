@@ -11,7 +11,11 @@ import { HomeComponent } from './home/home.component';
 import { Home1Component } from './home1/home1.component';
 import { Home2Component } from './home2/home2.component';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {MatSliderModule} from 
+'@angular/material/slider';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -24,9 +28,12 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     AppRouting,
-    NgbModule
+    NgbModule,
+    MatSliderModule,
+    MatIconModule
   ],
   exports: [],
   providers: [],

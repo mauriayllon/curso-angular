@@ -2,3 +2,12 @@
 login works!
 </p>
 <button routerLink='/pages'>Login</button>
+
+<div #test class="class1 class2" id="test2">Hola</div>
+
+<button (click)="sw = !sw;">SW</button>
+<div *ngIf="sw else esFalso">Es verdad</div>
+
+<ng-template #esFalso>
+  <p>Hola</p>
+</ng-template>

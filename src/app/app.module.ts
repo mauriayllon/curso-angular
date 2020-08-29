@@ -9,10 +9,10 @@ import {MatSliderModule} from
 '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-
   ],
   imports: [
     BrowserModule,

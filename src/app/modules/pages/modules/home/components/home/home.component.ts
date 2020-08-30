@@ -8,13 +8,16 @@ import { ProductService } from '../../../../../../services/product.service';
 })
 export class HomeComponent implements OnInit {
 
-  productos=[
-  ];
+  products=[];
 
   constructor(private productService: ProductService) { }
 
-  ngOnInit() {
-    this.productos = this.productService.getProducts();
-  } 
+  ngOnInit(): void {
+    this.productService.getProducts();
+    this.productService.getProducts().subscribe(res => {
+      Object.entries(res).map(p => this.products.push(p[1]));
+    });
+
+  }
 
 }

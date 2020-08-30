@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './components/login/login.component';
 import { LoginRoutingModule } from './login-routing.module';
 import { NgElseDirective } from '../../directives/ng-else.directive';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   imports: [
@@ -10,8 +10,8 @@ import { NgElseDirective } from '../../directives/ng-else.directive';
     LoginRoutingModule
   ],
   declarations: [
-    LoginComponent,
-    NgElseDirective
+    NgElseDirective,
+    LoginComponent
   ]
 })
 export class LoginModule { }

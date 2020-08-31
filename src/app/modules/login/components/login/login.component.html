@@ -1,4 +1,15 @@
 <p>login works!</p>
-<button routerLink='/pages'>Login</button>
+
+<div style="display: flex; flex-direction: column">
+<form (ngSubmit)="OnLogin2(form)" #form="ngForm">
+<input type="text" name="username" id="username" ngModel>
+<input type="password" name="password" id="password" ngModel>
+<button type="submit">Enviar</button>
+</form>
+</div>
+<!--<button routerLink="/pages">Login</button>-->
+<button (click)=OnLogin>Login1</button>
+<button (click)=OnLogin2(form)>Login2</button>
 <button (click)="sw = !sw;">SW</button>
 <p *ngElse="sw">SE MUESTRA SI ES FALSO</p> 
+

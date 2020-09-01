@@ -1,5 +1,5 @@
 <p>login works!</p>
-
+<!--
 <div style="display: flex; flex-direction: column">
 <form (ngSubmit)="OnLogin2(form)" #form="ngForm">
 <input type="text" name="username" id="username" ngModel>
@@ -7,9 +7,28 @@
 <button type="submit">Enviar</button>
 </form>
 </div>
-<!--<button routerLink="/pages">Login</button>-->
+<!--<button routerLink="/pages">Login</button>
 <button (click)=OnLogin>Login1</button>
 <button (click)=OnLogin2(form)>Login2</button>
 <button (click)="sw = !sw;">SW</button>
 <p *ngElse="sw">SE MUESTRA SI ES FALSO</p> 
+-->
+<input type="text" 
+required
+minlength="3"
+maxlength="5"
+ngModel
+#name="ngModel"
+>
 
+<div *ngIf="name.invalid && (name.touched || name.dirty)" class="alert alert-danger">
+  <div *ngIf="name.errors.required">
+    Name is required
+  </div>
+  <div *ngIf="name.errors.minlength">
+    Name must have 4 characters min
+  </div>
+  <div *ngIf="name.errors.maxlength">
+    Name must have 5 character max
+  </div>
+</div>

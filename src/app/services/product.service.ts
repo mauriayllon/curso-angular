@@ -8,6 +8,10 @@ export class ProductService {
   constructor(private http : HttpClient) { }
 
   public getProducts(): Observable<any> {
-    return this.http.get('https://angular-course-bcdc9.firebaseio.com/products.json');
+    return this.http.get('https://certiii-angular.firebaseio.com/products.json');
+  }
+
+  public addProduct(product: any): Observable <any>{
+    return this.http.post('https://certiii-angular.firebaseio.com/products.json', product)
   }
 }

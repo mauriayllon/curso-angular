@@ -3,16 +3,19 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './components/admin/admin.component';
 import { AdminRoutingModule } from './admin-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductService } from '../../../../services/product.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     AdminRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   declarations: [
     AdminComponent
   ],
- 
+  providers:[ProductService],
 })
 export class AdminModule { }

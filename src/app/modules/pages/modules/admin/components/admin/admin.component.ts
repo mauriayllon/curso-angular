@@ -17,6 +17,9 @@ export class AdminComponent implements OnInit, OnDestroy {
 
   productSubs: Subscription;
   productGetSubs: Subscription;
+  productDeleteSubs: Subscription;
+  productUpdateSubs: Subscription;
+  idEdit: any;
 
   constructor(private formBuilder: FormBuilder, private productService: ProductService) {}
 
@@ -39,7 +42,7 @@ export class AdminComponent implements OnInit, OnDestroy {
   }
 
   onDelete(id: any): void {
-    this.productService.deleteProduct(id).subscribe(
+   this.productDeleteSubs = this.productService.deleteProduct(id).subscribe(
       res => {
         console.log('RESPONSE: ', res);
         this.loadProduct();
@@ -49,7 +52,24 @@ export class AdminComponent implements OnInit, OnDestroy {
       }
     );
   }
-  
+
+  onEdit(product): void {
+    this.idEdit = product.id;
+    this.productForm.patchValue(product);
+  }
+
+  onUpdateProduct(): void {
+    this.productUpdateSubs = this.productService.updateProduct(this.idEdit, this.productForm.value).subscribe(
+      res => {
+        console.log('RESP UPDATE: ', res);
+        this.loadProduct();
+      },
+      err => {
+        console.log('ERROR UPDATE DE SERVIDOR');
+      }
+    );
+  }
+
   onEnviar2(){
     console.log('Form group: ',this.productForm.value);
     this.productSubs = this.productService.addProduct(this.productForm.value).subscribe(

@@ -18,13 +18,10 @@ export class AdminComponent implements OnInit, OnDestroy {
   productSubs: Subscription;
   productGetSubs: Subscription;
 
-  constructor(private formBuilder: FormBuilder, private productService: ProductService) {
-    this.productGetSubs = this.productService.getProducts().subscribe(res => {
-      Object.entries(res).map(p => this.products.push(p[1]));
-    });
-   }
+  constructor(private formBuilder: FormBuilder, private productService: ProductService) {}
 
   ngOnInit() {
+    this.loadProduct();
     this.productForm = this.formBuilder.group({
       description:['', [Validators.required, Validators.minLength(4)]],
       imageUrl:'',
@@ -33,12 +30,26 @@ export class AdminComponent implements OnInit, OnDestroy {
       title:''
     })
   } 
-  /*
-    onEnviar(){
-    console.log('Valor ', this.nameControl);
-    console.log('Valor ,',this.nameControl.value);
-  }*/
 
+  loadProduct(): void {
+    this.products = [];
+    this.productGetSubs = this.productService.getProducts().subscribe(res => {
+      Object.entries(res).map((p: any) => this.products.push({id: p[0], ...p[1]}));
+    });
+  }
+
+  onDelete(id: any): void {
+    this.productService.deleteProduct(id).subscribe(
+      res => {
+        console.log('RESPONSE: ', res);
+        this.loadProduct();
+      },
+      err => {
+        console.log('ERROR: ');
+      }
+    );
+  }
+  
   onEnviar2(){
     console.log('Form group: ',this.productForm.value);
     this.productSubs = this.productService.addProduct(this.productForm.value).subscribe(
@@ -48,6 +59,6 @@ export class AdminComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(){
-    this.productSubs ? this.productSubs.unsubscribe():'';  }
-
+    this.productSubs ? this.productSubs.unsubscribe():''; 
+    this.productGetSubs ? this.productGetSubs.unsubscribe():'';}
 }

@@ -32,7 +32,10 @@ export class AdminComponent implements OnInit {
 
   onEnviar2(){
     console.log('Form group: ',this.productForm.value);
-    this.productService.addProduct(this.productForm.value).subscribe(res => {console.log('Resp: ', res)})
+    this.productService.addProduct(this.productForm.value).subscribe(
+      res => {console.log('Resp: ', res)}, err =>{
+        console.log('Error de servidor')
+      })
   }
 
 }

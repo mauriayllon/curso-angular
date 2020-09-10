@@ -8,7 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSliderModule} from 
 '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
+import { Routes, RouterModule } from '@angular/router';
 
+const routes: Routes = [
+  {path: '', redirectTo: 'login', pathMatch:'full'},
+  
+  {path:'login', loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)},
+  
+  {path:'pages', loadChildren: () => import('./modules/pages/pages.module').then(m => m.PagesModule)}
+];
 
 @NgModule({
   declarations: [
@@ -18,7 +26,7 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    AppRouting,
+    RouterModule.forRoot(routes),
     NgbModule,
     MatSliderModule,
     MatIconModule

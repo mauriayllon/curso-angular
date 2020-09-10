@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './components/admin/admin.component';
 import { AdminRoutingModule } from './admin-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ProductService } from '../../../../services/product.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ProductService } from '../../../../services/product.service';
 
 @NgModule({
   imports: [
@@ -26,6 +26,8 @@ import { MatInputModule } from '@angular/material/input';
   declarations: [
     AdminComponent
   ],
-  providers:[ProductService],
+  providers:[
+    ProductService
+    ],
 })
 export class AdminModule { }

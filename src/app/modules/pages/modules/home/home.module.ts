@@ -4,8 +4,8 @@ import { HomeComponent } from './components/home/home.component';
 import { HomeRoutingModule } from './home.routing.module';
 import { MatCardModule } from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button'
-import { ProductService } from '../../../../services/product.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductService } from '../../../../services/product.service';
 
 
 @NgModule({

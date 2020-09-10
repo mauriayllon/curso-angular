@@ -10,8 +10,6 @@ import {MatSliderModule} from
 import {MatIconModule} from '@angular/material/icon';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent
@@ -26,6 +24,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatIconModule
   ],
   exports: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: []
 })
 export class AppModule { } 

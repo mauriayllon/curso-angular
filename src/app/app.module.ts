@@ -8,8 +8,8 @@ import {MatSliderModule} from
 '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
 import { Routes, RouterModule } from '@angular/router';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
+import { HttpClientModule} from '@angular/common/http';
+
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
@@ -36,11 +36,6 @@ const routes: Routes = [
   exports: [],
   bootstrap: [AppComponent],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
-      multi: true
-    }
   ]
 })
 export class AppModule { } 

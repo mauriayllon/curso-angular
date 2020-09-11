@@ -21,23 +21,13 @@ export class LoginComponent implements OnInit {
 
   onLogin(form : any){
     console.log('Form',form.value);
-    this.authService.login({
-      email: form.value.email,
-      password: form.value.password,
-      returnSecureToken: true
-    }).subscribe(
+    this.authService.login(form.value).subscribe(
       res => {
-        console.log('Login Response', res);
-        this.router.navigate(['pages']);
+        console.log('LOGIN RESPONSE: ', res);
       },
-      err=>{
-        console.log('Login ERROR' );
+      err => {
+        console.log('LOGIN ERROR: ');
       }
-    );
-  }
-
-  OnLogin2(form){
-    console.log('Variable Local', form);
-    this.router.navigate(['pages']);
+    )
   }
 }

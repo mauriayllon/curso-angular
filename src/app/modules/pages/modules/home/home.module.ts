@@ -5,7 +5,7 @@ import { HomeRoutingModule } from './home.routing.module';
 import { MatCardModule } from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button'
 import { HttpClientModule } from '@angular/common/http';
-import { ProductService } from '../../../../services/product.service';
+import { ProductService } from '../../../../shared/services/product.service';
 
 
 

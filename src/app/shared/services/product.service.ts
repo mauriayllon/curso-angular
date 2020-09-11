@@ -11,6 +11,10 @@ export class ProductService {
     return this.http.get('https://certiii-angular.firebaseio.com/products.json');
   }
 
+  public getProductsById(id: any): Observable<any> {
+    return this.http.get(`https://certiii-angular.firebaseio.com/products.json?orderBy="ownerId"&equalTo="${id}"&print=pretty`);
+  }
+
   public addProduct(product: any): Observable <any>{
     return this.http.post('https://certiii-angular.firebaseio.com/products.json', product)
   }

@@ -2,13 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { AppRouting } from './app.routing';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSliderModule} from 
 '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
 import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
@@ -29,10 +30,17 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     NgbModule,
     MatSliderModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   exports: [],
   bootstrap: [AppComponent],
-  providers: []
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ]
 })
 export class AppModule { } 

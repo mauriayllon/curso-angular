@@ -13,6 +13,11 @@ import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { ProductService } from './shared/services/product.service';
 import { AuthService } from './shared/services/auth.service';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { metaReducers } from './core/meta';
 
 
 const routes: Routes = [
@@ -38,7 +43,8 @@ const routes: Routes = [
     NgbModule,
     MatSliderModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   exports: [],
   bootstrap: [AppComponent],

@@ -26,7 +26,6 @@ import { ProductService } from '../../../../shared/services/product.service';
     AdminComponent
   ],
   providers:[
-    ProductService
     ],
 })
 export class AdminModule { }

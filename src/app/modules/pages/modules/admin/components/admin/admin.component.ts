@@ -45,7 +45,7 @@ export class AdminComponent implements OnInit, OnDestroy {
    this.productDeleteSubs = this.productService.deleteProduct(id).subscribe(
       res => {
         console.log('RESPONSE: ', res);
-        this.loadProduct();
+          this.loadProduct();
       },
       err => {
         console.log('ERROR: ');

@@ -27,7 +27,6 @@ import { AuthService } from '../../shared/services/auth.service';
     NgElseDirective
   ],
   providers:[
-    AuthService
   ]
 })
 export class LoginModule { }

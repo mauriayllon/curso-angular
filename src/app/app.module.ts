@@ -11,6 +11,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 import { AuthGuard } from './shared/guards/auth.guard';
+import { ProductService } from './shared/services/product.service';
+import { AuthService } from './shared/services/auth.service';
 
 
 const routes: Routes = [
@@ -41,6 +43,7 @@ const routes: Routes = [
   exports: [],
   bootstrap: [AppComponent],
   providers: [
+      AuthService,
       AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,

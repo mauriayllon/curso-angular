@@ -11,9 +11,9 @@ key = environment.auth.key;
 
 constructor(private http : HttpClient) { }
 
-public login(body:any): Observable<any> {
-    return this.http.post(`${this.url}/v1/accounts:signInWithPassword?key=${this.key}`,body).pipe(
-      map((res:any)=>{
+public login(body: any): Observable<any> {
+    return this.http.post(`${this.url}/v1/accounts:signInWithPassword?key=${this.key}`, body).pipe(
+      map((res: any) => {
         this.authSucess(res.idToken, res.localId);
         return res;
       })

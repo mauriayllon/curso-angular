@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProductService } from '../../../../../../shared/services/product.service';
 import { Subscription } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { addProduct } from '../../store/home.actions'
+import { AddProduct } from '../../store/home.actions'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -25,8 +25,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.productSubs ? this.productSubs.unsubscribe():'';
   }
 
-  onComprar():void{
-    this.store.dispatch(addProduct({product:'hola'}))
+  onComprar(product):void{
+    this.store.dispatch(AddProduct({product: product}))
   }
 
 

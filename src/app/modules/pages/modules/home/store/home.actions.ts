@@ -1,3 +1,3 @@
 import { createAction, props } from "@ngrx/store";
 
-export const addProduct = createAction('[home]AddProduct', props<{product:any}>()); 
+export const AddProduct = createAction('[home]AddProduct', props<{product:any}>()); 

@@ -1,4 +1,18 @@
-<div class="row">
+<mat-drawer-container class="example-container" autosize style="width: 100%; height:600px">
+  <mat-drawer #drawer style="width:300px; height:100%;" mode="side" [position]="'end'">
+    <table>
+      <tr *ngFor="let product of cart">
+        <td>{{product.title}}/<td>
+        <td>{{product.price}}</td>
+      </tr>
+    </table>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+    <div class="row">
   <div *ngFor="let product of products"
        class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3"
        style="padding: 50px; display: flex; justify-content: center;">
@@ -18,6 +32,12 @@
         <button mat-button (click)='onComprar(product)'>Comprar</button>
       </mat-card-actions>
     </mat-card>
-
   </div>
 </div>
+  </div>
+
+</mat-drawer-container>
+
+<!--<input type="text" [formControl]="nameControl">
+<button (click)='onEnviar()'>Enviar</button>-->
+
